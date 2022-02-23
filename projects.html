@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Sand</title>
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+    <script src="js/main.js" async defer></script>
+    <script src="js/projects.js" async defer></script>
+</head>
+
+<body>
+    <nav>
+        <div id="navLinks">
+            <div class="navButton">
+                <a href="about.html">About</a>
+            </div>
+            <div class="navButton">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="navButton">
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+    <div id="projectsTitle">
+        <div id="projectsTitleText">Projects</div>
+    </div>
+
+    <div id="projectsContainer">
+
+    </div>
+
+    <div id="projectPopup">
+        <div id="projectPopupCloser" onclick="$('#projectPopup').hide()"></div>
+        <div id="projectPopupContainer">
+            <div id="projectTitle">Homesub</div>
+            <div id="projectHeader">
+                <div id="projectImage">
+                    <img src="images/projectsImages/homesub2.png" alt="Image of project">
+                </div>
+                <div id="projectLinks"></div>
+            </div>
+            <div id="projectBody">
+                Homesub is my coronavirus relief effort. As someone who has experienced firsthand how difficult it can
+                be to be completely disconnected from the physical environment of school, I wanted to find a way to help
+                my classmates through the rough transition period to online learning. Seeing the difficulties that
+                computer science students had with writing their code from home, I created a website for them to write,
+                test, and submit all of their code from. Homesub was my first time working with any sort of backend, and
+                was a valuable learning experience when it came to working with server side development.
+            </div>
+        </div>
+    </div>
+
+    <div id="transitioner"></div>
+    <script src="js/nav.js"></script>
+    <script>
+        $("#Projects").addClass("selected");
+    </script>
+</body>
+
+</html>

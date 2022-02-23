@@ -1,0 +1,176 @@
+#title {
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 0.5em;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#name {
+    font-size: 13rem;
+    font-weight: bold;
+    text-align: center;
+    /* margin-bottom: -3rem; */
+    color: var(--main-txt-color);
+    font-family: var(--header-font);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    line-height: 1;
+}
+
+#name::after {
+    content: "Matthew Sand";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* transform: scale(1.03); */
+    color: var(--main-bg-color);
+    font-family: var(--header-font);
+    transform: scaleX(1.012);
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -1;
+}
+
+#subtitle {
+    font-size: 2.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-family: var(--subheader-font);
+    position: relative;
+}
+
+#title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: var(--subheader-font);
+    background-color: var(--main-bg-color);
+    animation-name: shrinkX;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+
+@keyframes shrinkX {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0.8);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: -100vw 0;
+    }
+
+
+    25% {
+        background-position: 0 0;
+    }
+
+    75% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100vw 0;
+    }
+}
+
+
+@keyframes glitchShadow {
+    0% {
+        transform: scaleX(1);
+    }
+
+    25% {
+        transform: scaleX(1.03);
+    }
+
+    75% {
+        transform: scaleX(1.02);
+    }
+
+    100% {
+        transform: scaleX(1.015);
+    }
+
+
+}
+
+
+.socialIcon {
+    animation-name: socialIconIntro;
+    animation-duration: 0.5s !important;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+#socialBar {
+    /* background: blue; */
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+
+.socialIcon svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+@keyframes socialIconIntro {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-25%);
+    }
+
+    90% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,192 @@
+#contactTitle {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    font-family: var(--header-font);
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+#contactTitleText::after {
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transform: scale(1.03); */
+    color: var(--main-bg-color);
+    font-family: var(--header-font);
+    transform: scaleX(1.022);
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -1;
+}
+
+#contactTitleText {
+    position: relative;
+    /* background: blue; */
+    display: inline;
+    border-bottom: var(--main-accent-color) solid 0.25rem;
+}
+
+
+.contactField input,
+.contactField textarea {
+    background: var(--inset-bg-color);
+    border: none;
+    box-shadow: inset 0 0.25rem 0.5rem #000;
+    font-size: 2.5rem;
+    font-family: var(--body-font);
+    color: var(--main-txt-color);
+    transition: all 0.25s ease-in-out;
+}
+
+textarea {
+    font-size: 1.5rem !important;
+}
+
+.contactField {
+    margin-bottom: 3rem;
+}
+
+
+.contactField:hover input,
+.contactField:hover textarea,
+input:focus,
+textarea:focus {
+    background: var(--main-bg-color);
+    color: var(--main-txt-color);
+    box-shadow: inset 0 0.125rem 0.25rem #000;
+}
+
+#submitButton {
+    background-color: var(--inset-bg-color);
+    background-image: linear-gradient(to right, var(--main-accent-color), var(--main-accent-color) 50%);
+    background-size: 100% 0%;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    width: 20rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-txt-color);
+    font-size: 1.5rem;
+    font-family: var(--header-font);
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    border: none;
+    box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+
+#nameField,
+#emailField {
+    position: relative;
+}
+
+#nameField:after {
+    content: "Name";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transform: scale(1.03); */
+    color: var(--main-txt-color);
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    margin-left: 0.1rem;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+}
+
+#emailField:after {
+    content: "Email";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transform: scale(1.03); */
+    color: var(--main-txt-color);
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    margin-left: 0.1rem;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+}
+
+
+#emailField:focus-within:after {
+    color: var(--main-txt-color);
+    transform: translateY(-100%);
+}
+
+#nameField:focus-within:after,
+#nameField.hasText:after,
+#emailField.hasText.hasEmail:after {
+    color: var(--main-accent-color);
+    transform: translateY(-100%);
+}
+
+
+
+#emailField.hasText:after {
+    color: tomato;
+    transform: translateY(-100%);
+}
+
+#submitButton:hover {
+    background-size: 100% 100%;
+    box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0);
+    color: var(--main-bg-color);
+}
+
+#conactFields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.contactField {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactField label {
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+}
+
+
+#textFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    min-height: 20rem;
+    /* background: blue; */
+}
+
+#contactPreface {
+    font-size: 2rem;
+    font-family: var(--header-font);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}

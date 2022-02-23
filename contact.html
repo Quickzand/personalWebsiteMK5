@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Sand</title>
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+    <script src="js/main.js" async defer></script>
+    <script src="js/contact.js" async defer></script>
+</head>
+
+<body>
+    <nav>
+        <div id="navLinks">
+            <div class="navButton">
+                <a href="about.html">About</a>
+            </div>
+            <div class="navButton">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="navButton">
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+    <div id="contactTitle">
+        <div id="contactTitleText">Contact</div>
+    </div>
+
+    <div id="contactPreface">
+        Feel free to contact me if you have any questions! I am always open to new projects and opportunities!
+    </div>
+    <form action="" method="get">
+        <div id="conactFields">
+
+            <div id="textFields">
+                <div class="contactField" id="nameField">
+                    <input type="text" name="name" id="name" placeholder="">
+                </div>
+                <div class="contactField" id="emailField">
+                    <input type="email" name="email" id="email" placeholder="">
+                </div>
+            </div>
+            <div class="contactField">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+        </div>
+        <div class="contactField">
+            <div id="submitButton">
+                Submit
+            </div>
+        </div>
+    </form>
+
+
+
+    <div id="transitioner"></div>
+    <script src="js/nav.js"></script>
+    <script>
+        $("#Contact").addClass("selected");
+    </script>
+</body>
+
+</html>

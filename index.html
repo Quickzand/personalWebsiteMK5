@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Sand</title>
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+    <script src="js/main.js" async defer></script>
+</head>
+
+<body>
+    <nav>
+        <div id="navLinks">
+            <div class="navButton">
+                <a href="about.html">About</a>
+            </div>
+            <div class="navButton">
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="navButton">
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+    <div id="title">
+        <div id="name">Matthew Sand</div>
+        <div id="subtitle">Fullstack Web Developer and Computer Science Student</div>
+    </div>
+
+    <div id="transitioner"></div>
+    <script src="js/nav.js"></script>
+    <script>
+        $("#Home").addClass("selected");
+    </script>
+</body>
+
+</html>
