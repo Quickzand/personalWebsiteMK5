@@ -53,3 +53,18 @@ function openInNewTab(url) {
     var win = window.open(url, '_blank');
     // win.focus();
 }
+
+function shareURL(title, url) {
+    navigator.share({
+        title: title,
+        url: url
+    })
+}
+
+$.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};

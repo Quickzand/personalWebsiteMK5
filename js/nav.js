@@ -29,7 +29,6 @@ function navBarBuilder() {
     navLinks.append(navButtonBuilder("About", "about"));
     navLinks.append(navButtonBuilder("Projects", "projects"));
     navLinks.append(navButtonBuilder("Contact", "contact"));
-    navLinks.append(navButtonBuilder("Resume", "resume"));
 }
 
 navBarBuilder();

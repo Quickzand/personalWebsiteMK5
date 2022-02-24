@@ -33,3 +33,14 @@ skillBarBuilder("Office Suite", 90, $("#proficiencies .statsList"));
 skillBarBuilder("Image Editing", 88, $("#proficiencies .statsList"));
 skillBarBuilder("Video Editing", 85, $("#proficiencies .statsList"));
 skillBarBuilder("Game Design", 30, $("#proficiencies .statsList"));
+
+$(window).scroll(function () {
+    var skillBars = $(".skillBarFill");
+    // Goes through each skill bar and checks if it is in view
+    skillBars.each(function () {
+        var $this = $(this);
+        if ($this.isInViewport()) {
+            $this.addClass("isVisible");
+        }
+    });
+});

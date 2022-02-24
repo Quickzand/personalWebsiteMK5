@@ -201,15 +201,32 @@
         <div class="statsList">
         </div>
     </div>
-    <script src="js/nav.js"></script>
-    <script>
-        $("#About").addClass("selected");
-    </script>
-    <div id="transitioner"></div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
+    <div class="aboutList" id="resumeSection">
+        <div class="aboutListHeader" data-aos="flip-down" data-aos-once="true" id="resumeSectionHeader">
+            Resume
+        </div>
+        <div id="resumeContainer">
+            <iframe src="Resume | Matthew Sand.pdf" frameborder="0"></iframe>
+            <div id="resumeButtons">
+                <div class="resumeButton" onclick="openInNewTab('Resume | Matthew Sand.pdf')">Open</div>
+                <div class="resumeButton" onclick="shareURL('Resume | Matthew Sand','Resume | Matthew Sand.pdf')">Share
+                </div>
+                <div class="resumeButton" onclick="document.getElementById('downloadResume').click()">
+                    Download</div>
+            </div>
+            <a href="Resume | Matthew Sand.pdf" download id="downloadResume" hidden></a>
+
+        </div>
+        <script src="js/nav.js"></script>
+        <script>
+            $("#About").addClass("selected");
+        </script>
+        <div id="transitioner"></div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 
 </html>
