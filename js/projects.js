@@ -2,7 +2,8 @@ var projects = [{
         "name": "WikiWhat",
         "description": "WikiWhat is a game I built for my friends and I. The goal is, given only images from a wikiHow article, guess what article the images correspond to. The project randomly pulls the article and images contained within it, as well as pulling the names of other, incorrect articles. This project had me dealing a lot with game design as well as database development and developing a python backend.",
         "images": ["images/projectsImages/wikiWhat.png", "images/projectsImages/wikiWhat2.png"],
-        "links": []
+        "links": [],
+        "tags": ["HTML", "CSS", "JavaScript", "JQuery", "PHP", "Python", "Sql"]
     },
     {
         "name": "Dequeue",
@@ -16,7 +17,8 @@ var projects = [{
                 "type": "site",
                 "url": "https://matthewsand.info/dequeue"
             }
-        ]
+        ],
+        "tags": ["HTML", "CSS", "JavaScript", "JQuery", "PWA's", "Python", "Sql", "Websockets"]
     },
     {
         "name": "Homesub",
@@ -30,7 +32,8 @@ var projects = [{
                 "type": "site",
                 "url": "http://www.homesub.dev/"
             }
-        ]
+        ],
+        "tags": []
     },
     {
         "name": "Google Meets Stories",
@@ -89,6 +92,14 @@ function projctCardBuilder(project) {
     var projectCard = $("<div>").addClass("projectCard");
     var projectTitle = $("<div>").addClass("projectTitle").text(project.name);
     var projectPreview = $("<img>").addClass("projectPreview").attr("src", project.images[0]);
+    if (project.tags) {
+        var tagsContainer = $("<div>").addClass("tagsContainer");
+        for (var i = 0; i < project.tags.length; i++) {
+            var tag = $("<div>").addClass("tag").text(project.tags[i]);
+            tagsContainer.append(tag);
+        }
+        // projectCard.append(tagsContainer);
+    }
     projectCard.append(projectPreview).append(projectTitle);
     projectCard.click(function () {
         openProject(project);

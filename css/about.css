@@ -121,7 +121,8 @@ body {
 }
 
 
-.schoolHeader {
+.schoolHeader,
+.experienceTitle {
     font-size: 3rem;
     font-family: var(--header-font);
     font-weight: 300;
@@ -131,16 +132,19 @@ body {
     margin-bottom: 0rem;
 }
 
-#education {
+.school,
+.experience {
     padding-left: 2rem;
 }
 
-.schoolHeader img {
+.schoolHeader img,
+.experienceIcon {
     height: 2.7rem;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
 }
 
-.schoolSubtitle {
+.schoolSubtitle,
+.experienceSubtitle {
     margin-top: 0.5rem;
     line-height: 1;
     font-size: 1.75rem;
@@ -232,6 +236,14 @@ body {
     left: 0;
 }
 
+@media only screen and (max-width: 600px) {
+    .skillBarHeader {
+
+        transform: translateY(-250%);
+
+    }
+}
+
 .skillBarFillContainer {
     overflow: hidden;
     width: 100%;
@@ -253,6 +265,11 @@ body {
 
 .skillBarFill.isVisible {
     animation: growSkillBar 1.5s ease-in-out forwards;
+}
+
+#resumeSection {
+    width: 100vw;
+    overflow: hidden;
 }
 
 #resumeSectionHeader {

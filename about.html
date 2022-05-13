@@ -54,8 +54,29 @@
         human friendly place. Here's how I've been working towards that goal:
     </div>
 
-    <div id="education">
-        <div class="school" data-aos="fade-right" data-aos-delay="2500" data-aos-anchor="#missionStatement"
+    <div id="experiences" class="aboutList">
+        <div id="experienceHeader" class="aboutListHeader" data-aos="fade-in" data-aos-duration="2500"
+            data-aos-once="true">
+            Experience
+        </div>
+        <div class="experience">
+            <div class="experienceTitle" data-aos="fade-right" data-aos-delay="0" data-aos-anchor="#experienceHeader"
+                data-aos-once="true">
+                <img src="images/amazonLogo.png" alt="Amazon Logo" class="experienceIcon">Amazon
+
+            </div>
+            <div class="experienceSubtitle">
+                Software Development Intern | June 2022 - Present
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="aboutList">
+        <div class="aboutListHeader" data-aos="flip-down" id="educationHeader" data-aos-delay="0" data-aos-once="true"
+            data-aos-anchor="#missionStatement" data-aos-duration="1000">
+            Education
+        </div>
+        <div class="school" data-aos="fade-right" data-aos-delay="0" data-aos-anchor="#educationHeader"
             data-aos-once="true">
             <div class="schoolHeader">
                 <img src="images/knightsLogo.png" alt="UCF Knights Logo" class="schoolLogo">University of Central
@@ -63,7 +84,7 @@
             </div>
             <div class="schoolSubtitle">College of Engineering and Computer Science | 2021 - Present</div>
         </div>
-        <div class="school" data-aos="fade-right" data-aos-delay="2800" data-aos-anchor="#missionStatement"
+        <div class="school" data-aos="fade-right" data-aos-delay="800" data-aos-anchor="#educationHeader"
             data-aos-once="true">
             <div class="schoolHeader">
                 <img src="images/chargersLogo.png" alt="Suncoast Chargers Logo" class="schoolLogo">Suncoast High School
@@ -217,17 +238,18 @@
             <a href="Resume | Matthew Sand.pdf" download id="downloadResume" hidden></a>
 
         </div>
-        <script src="js/main.js"></script>
-        <script src="js/skillBars.js"></script>
-        <script src="js/nav.js"></script>
-        <script>
-            $("#About").addClass("selected");
-        </script>
-        <div id="transitioner"></div>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/skillBars.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        $("#About").addClass("selected");
+    </script>
+    <div id="transitioner"></div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

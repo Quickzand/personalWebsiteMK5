@@ -229,3 +229,49 @@
 #projectLinks {
     margin-left: 2rem;
 }
+
+.tagsContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(0.5);
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    place-items: center;
+    transition: all 0.25s ease-in-out;
+
+}
+
+.tag {
+    background: var(--main-accent-color);
+    display: inline-grid;
+    place-items: center;
+    width: 10rem;
+    height: 1.9rem;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 0.5rem;
+    font-family: var(--header-font);
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    color: var(--main-bg-color);
+    pointer-events: none;
+}
+
+.projectCard:hover .tag:nth-child(2n+1) {
+    transform: translateX(-110%);
+    opacity: 1;
+}
+
+.projectCard:hover .tag:nth-child(2n) {
+    transform: translateX(110%);
+    opacity: 1;
+}
+
+.projectCard:hover .tagsContainer {
+    transform: translate(-50%, -50%) scale(1);
+}

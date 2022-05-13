@@ -77,6 +77,7 @@ function metaTagsBuilder() {
     var keywords = $("<meta>").attr("name", "keywords").attr("content", "Resume, Fullstack, Developer, Computer Science, University, Central, Florida, Matthew, Sand, Matthew Sand, Programmer");
     var viewport = $("<meta>").attr("name", "viewport").attr("content", "width=device-width, initial-scale=1.0");
     var icon = $("<link>").attr("rel", "icon").attr("href", "favicon.ico");
-
     $("head").append(author).append(description).append(keywords).append(viewport).append(icon);
 }
+
+metaTagsBuilder();
